@@ -1,0 +1,339 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_usdtToken",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_token0050t",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_priceOracle",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_issuer",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "sharesRedeemed",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "usdtAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "Redemption",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "usdtAmount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "sharesReceived",
+						"type": "uint256"
+					}
+				],
+				"name": "Subscription",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "MIN_REDEMPTION_SHARES",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "MIN_SUBSCRIPTION_USD",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getCurrentPriceInfo",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "price0050Cents",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "priceDisplay",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getIssuerBalances",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "usdtBalance",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "shares0050t",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "getUserBalances",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "usdtBalance",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "shares0050t",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "issuer",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "shares",
+						"type": "uint256"
+					}
+				],
+				"name": "previewRedemption",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "usdtToReceive",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "price0050Cents",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "usdtAmountCents",
+						"type": "uint256"
+					}
+				],
+				"name": "previewSubscription",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "sharesToReceive",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "actualUsdtNeeded",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "price0050Cents",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "priceOracle",
+				"outputs": [
+					{
+						"internalType": "contract IPriceOracle",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "sharesToRedeem",
+						"type": "uint256"
+					}
+				],
+				"name": "redeem",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "usdtAmountCents",
+						"type": "uint256"
+					}
+				],
+				"name": "subscribe",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "token0050t",
+				"outputs": [
+					{
+						"internalType": "contract IERC20",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "usdtToken",
+				"outputs": [
+					{
+						"internalType": "contract IERC20",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/SubscriptionRedemption.sol": "SubscriptionRedemption"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/SubscriptionRedemption.sol": {
+			"keccak256": "0xb88e4d471574221d8fecd15e7728c905f19b20593792082425e884640d5dfda1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://62d9d80b1f5f86a6f8956f5fa4eca9dbd4a461bbbd685f11930039c1f5b3dc8a",
+				"dweb:/ipfs/QmRhWXgLZuf5jfbDf4LVQWQDRNaBeRyTtvrdXaWp8NuXdQ"
+			]
+		}
+	},
+	"version": 1
+}

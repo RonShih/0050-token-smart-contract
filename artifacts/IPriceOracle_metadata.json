@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getLatestPriceUSD",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/SubscriptionRedemption.sol": "IPriceOracle"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/SubscriptionRedemption.sol": {
+			"keccak256": "0xb88e4d471574221d8fecd15e7728c905f19b20593792082425e884640d5dfda1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://62d9d80b1f5f86a6f8956f5fa4eca9dbd4a461bbbd685f11930039c1f5b3dc8a",
+				"dweb:/ipfs/QmRhWXgLZuf5jfbDf4LVQWQDRNaBeRyTtvrdXaWp8NuXdQ"
+			]
+		}
+	},
+	"version": 1
+}
